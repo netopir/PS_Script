@@ -1,4 +1,4 @@
-﻿#PowerShell: Open a File
+﻿#PowerShell: Open a .diz File
 Write-Host "`nOpen .diz File" -ForegroundColor Green
 function Open-File([string] $initialDirectory){
     [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | Out-Null
@@ -15,7 +15,7 @@ Write-Output $FilePathDIZ
 #PowerShell: Pause for 2 seconds
 timeout /t 2 | Out-Null
 
-#PowerShell: Open a File
+#PowerShell: Open a .nfo File
 Write-Host "`nOpen .nfo File" -ForegroundColor Green
 function Open-File([string] $initialDirectory){
     [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | Out-Null
@@ -103,7 +103,7 @@ Write-Host $Password -ForegroundColor Yellow
 #PowerShell: Pause for 1 seconds
 timeout /t 1 | Out-Null
 
-$TextToTemplate = "`n[CENTER]
+$TextToTemplate = "`n`n[CENTER]
 [SIZE=8][B][COLOR=blue]$TitelOhnePunkt[/color][/B][/SIZE]
 
 [IMGS=450]$Cover[/IMGS]
@@ -120,6 +120,8 @@ Bei Problemen mit dem Download bitte hier im Beitrag auf 'Melden' klicken.
 [/Center]
 "
 Write-Host $TextToTemplate  -ForegroundColor DarkMagenta
+
+Set-Clipboard -Value $TextToTemplate
 
 Write-Host "`nRead .diz File to String" -ForegroundColor Green
 $fileContentsIMDB = Get-Content $FilePathDIZ | Select-String -Pattern "IMDB=" -SimpleMatch
