@@ -26,12 +26,12 @@ $StartTime = (Get-Date)
 
 $nzbCheckEXE = "C:\Users\Martin\Desktop\Usenet_Programms\nzbCheck\nzbcheck.exe"
 
-$Server = "7ec8ebeb233ef62e:3W3kanl@@@post.eweka.nl:119:8"
+$Server = ""
 $Hosts = 'post.eweka.nl'
 $Port = '119'
 $SSL  = 'false'
-$User = '7ec8ebeb233ef62e'
-$Pass = '3W3kanl'
+$User = ''
+$Pass = ''
 $Connection = '25'
 
 Write-Host "`nOpen .nzb File" -ForegroundColor Green
